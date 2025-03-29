@@ -1,9 +1,9 @@
 import { SafeAreaView, Text } from "react-native";
 
-export default function Booking() {
+export default function Users() {
   return (
     <SafeAreaView>
-      <Text>Booking</Text>
+      <Text>Users</Text>
     </SafeAreaView>
   );
 }
