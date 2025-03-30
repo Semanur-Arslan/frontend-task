@@ -1,4 +1,4 @@
-import { Dimensions, StyleSheet } from "react-native";
+import { Dimensions, StyleSheet,Platform } from "react-native";
 import { Colors } from "../../constants/Colors";
 
 const screen = Dimensions.get("window");
@@ -13,7 +13,7 @@ export default StyleSheet.create({
     height: screen.height / 3,
   },
   img: {
-    width: screen.width / 2,
+    width: Platform.OS === "web" ? screen.width / 2 : 150,
   },
   contentWrapper: {
     justifyContent: "flex-start",

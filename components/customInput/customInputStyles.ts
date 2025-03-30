@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions } from "react-native";
+import { StyleSheet, Dimensions, Platform } from "react-native";
 import { Colors } from "@/constants/Colors";
 
 const screen = Dimensions.get("window");
@@ -22,7 +22,7 @@ export default StyleSheet.create({
   input: {
     paddingVertical: 12,
     fontSize: 16,
-    width: screen.width - 90,
+     width: Platform.OS === "web" ? screen.width - 90: 150,
     backgroundColor: Colors.white,
   },
 });
