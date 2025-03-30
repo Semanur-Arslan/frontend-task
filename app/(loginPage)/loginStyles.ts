@@ -6,14 +6,16 @@ const screen = Dimensions.get("window");
 export default StyleSheet.create({
   container: {
     flex: 1,
+    alignItems: 'center',
   },
   logoWrapper: {
     alignItems: "center",
     justifyContent: "center",
     height: Platform.OS === "web" ? "50%" : screen.height / 3,
+    minHeight: 200,
   },
   img: {
-    width: Platform.OS === "web" ?  200 : screen.width / 2,
+    width: Platform.OS === "web" ?  500 : screen.width / 2,
   },
   contentWrapper: {
     justifyContent: "flex-start",
@@ -35,6 +37,7 @@ export default StyleSheet.create({
     margin: 24,
   },
   buttonWrapper: {
+    width: Platform.OS === "web" ?  500 : screen.width / 2,
     paddingHorizontal: 24,
     paddingVertical: 24,
   },
