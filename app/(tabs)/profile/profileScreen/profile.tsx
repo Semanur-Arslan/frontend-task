@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, View } from "react-native";
+import { SafeAreaView, ScrollView, View } from "react-native";
 import styles from "./profileStyles";
 import CustomButton from "@/components/customButton";
 import { useLogin } from "@/hooks/useLogin";
@@ -16,29 +16,31 @@ const Profile: React.FC = () => {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.content}>
-        <View style={styles.wrapper}>
-          <SectionTitle title="Company Details" />
-          <View style={styles.contentWrapper}>
-            <ProfileImagePicker />
-            <DetailsList data={companyDetails} />
+    <ScrollView>
+      <SafeAreaView style={styles.container}>
+        <View style={styles.content}>
+          <View style={styles.wrapper}>
+            <SectionTitle title="Company Details" />
+            <View style={styles.contentWrapper}>
+              <ProfileImagePicker />
+              <DetailsList data={companyDetails} />
+            </View>
+          </View>
+          <View style={styles.wrapper}>
+            <SectionTitle title="Bank Details" editable />
+            <DetailsList data={bankDetails} />
           </View>
         </View>
-        <View style={styles.wrapper}>
-          <SectionTitle title="Bank Details" editable />
-          <DetailsList data={bankDetails} />
+        <View style={styles.buttonWrapper}>
+          <CustomButton
+            title="Log out"
+            onPress={handleLogout}
+            backgroundColor="orange"
+            icon="logout"
+          />
         </View>
-      </View>
-      <View style={styles.buttonWrapper}>
-        <CustomButton
-          title="Log out"
-          onPress={handleLogout}
-          backgroundColor="orange"
-          icon="logout"
-        />
-      </View>
-    </SafeAreaView>
+      </SafeAreaView>
+    </ScrollView>
   );
 };
 

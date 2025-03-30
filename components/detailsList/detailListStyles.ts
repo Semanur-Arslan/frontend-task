@@ -1,8 +1,10 @@
+import { Colors } from "@/constants/Colors";
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
       infoRow: {
         flexDirection: "row",
+        flexWrap: "wrap", 
         justifyContent: "space-between",
         marginBottom: 4,
       },
@@ -10,7 +12,7 @@ export default StyleSheet.create({
         fontWeight: "bold",
       },
       valueText: {
-        color: "#555",
+        color: Colors.icon,
       },
 
     
