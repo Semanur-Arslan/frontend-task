@@ -37,7 +37,7 @@ export default StyleSheet.create({
     margin: 24,
   },
   buttonWrapper: {
-    width: Platform.OS === "web" ?  500 : screen.width / 2,
+    width: Platform.OS === "web" ?  500 : 'auto',
     paddingHorizontal: 24,
     paddingVertical: 24,
   },
