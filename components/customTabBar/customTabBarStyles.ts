@@ -17,7 +17,7 @@ export default StyleSheet.create({
     gap: 6,
   },
   tabText: {
-    color: Colors.light.icon,
+    color: Colors.icon,
     fontSize: 16,
   },
   activeTab: {
