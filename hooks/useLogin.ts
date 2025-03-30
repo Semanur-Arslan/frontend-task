@@ -55,7 +55,7 @@ export function useLogin() {
   const logout = async () => {
     await AsyncStorage.removeItem('user');
     setIsLoggedIn(false);
-        router.push("/(loginPage)/login");
+        router.push("/(loginPage)");
   };
 
   return { isLoading, isLoggedIn, error, login, logout };
