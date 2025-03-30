@@ -13,7 +13,7 @@ export default StyleSheet.create({
     height: screen.height / 3,
   },
   img: {
-    width: Platform.OS === "web" ? screen.width / 2 : 150,
+    width: Platform.OS === "web" ?  150 : screen.width / 2,
   },
   contentWrapper: {
     justifyContent: "flex-start",
