@@ -10,10 +10,10 @@ export default StyleSheet.create({
   logoWrapper: {
     alignItems: "center",
     justifyContent: "center",
-    height: screen.height / 3,
+    height: Platform.OS === "web" ? "50%" : screen.height / 3,
   },
   img: {
-    width: Platform.OS === "web" ?  150 : screen.width / 2,
+    width: Platform.OS === "web" ?  200 : screen.width / 2,
   },
   contentWrapper: {
     justifyContent: "flex-start",

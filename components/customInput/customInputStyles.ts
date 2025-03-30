@@ -22,7 +22,7 @@ export default StyleSheet.create({
   input: {
     paddingVertical: 12,
     fontSize: 16,
-     width: Platform.OS === "web" ? 150 : screen.width - 90,
+     width: Platform.OS === "web" ? '100%' : screen.width - 90,
     backgroundColor: Colors.white,
   },
 });
