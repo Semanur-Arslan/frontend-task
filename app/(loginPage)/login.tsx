@@ -4,6 +4,7 @@ import {
   Text,
   View,
   ActivityIndicator,
+  ScrollView,
 } from "react-native";
 import styles from "./loginStyles";
 import { useState, useEffect } from "react";
@@ -31,42 +32,44 @@ export default function Login() {
   }, [isLoggedIn, router]);
 
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.logoWrapper}>
-        <Image
-          style={styles.img}
-          source={require("../../assets/images/logo.png")}
-          resizeMode="contain"
-        />
-      </View>
-      <View style={styles.contentWrapper}>
-        <Text style={styles.title}>LOG IN</Text>
-        <View style={styles.inputWrapper}>
-          <CustomInput
-            icon="user"
-            placeholder="USER ID"
-            value={userId}
-            onChangeText={setUserId}
-          />
-          <CustomInput
-            icon="lock"
-            placeholder="PASSWORD"
-            value={password}
-            onChangeText={setPassword}
-            secureTextEntry
+    <ScrollView>
+      <SafeAreaView style={styles.container}>
+        <View style={styles.logoWrapper}>
+          <Image
+            style={styles.img}
+            source={require("../../assets/images/logo.png")}
+            resizeMode="contain"
           />
         </View>
-        <Text style={styles.text}>Forgot Password</Text>
-        <View style={styles.buttonWrapper}>
-          <CustomButton
-            title="Log In"
-            onPress={handleLogin}
-            backgroundColor="orange"
-          />
+        <View style={styles.contentWrapper}>
+          <Text style={styles.title}>LOG IN</Text>
+          <View style={styles.inputWrapper}>
+            <CustomInput
+              icon="user"
+              placeholder="USER ID"
+              value={userId}
+              onChangeText={setUserId}
+            />
+            <CustomInput
+              icon="lock"
+              placeholder="PASSWORD"
+              value={password}
+              onChangeText={setPassword}
+              secureTextEntry
+            />
+          </View>
+          <Text style={styles.text}>Forgot Password</Text>
+          <View style={styles.buttonWrapper}>
+            <CustomButton
+              title="Log In"
+              onPress={handleLogin}
+              backgroundColor="orange"
+            />
+          </View>
         </View>
-      </View>
-      {isLoading && <ActivityIndicator size="large" color={Colors.orange} />}
-      {error && <Text style={styles.errorMessage}>{error}</Text>}
-    </SafeAreaView>
+        {isLoading && <ActivityIndicator size="large" color={Colors.orange} />}
+        {error && <Text style={styles.errorMessage}>{error}</Text>}
+      </SafeAreaView>
+    </ScrollView>
   );
 }

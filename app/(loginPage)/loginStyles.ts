@@ -11,11 +11,11 @@ export default StyleSheet.create({
   logoWrapper: {
     alignItems: "center",
     justifyContent: "center",
-    height: Platform.OS === "web" ? "50%" : screen.height / 3,
-    minHeight: 200,
+    height: Platform.OS === "web" ? "30%" : screen.height / 3,
+    minHeight: 100,
   },
   img: {
-    width: Platform.OS === "web" ?  500 : screen.width / 2,
+    width: Platform.OS === "web" ?  200 : screen.width / 2,
   },
   contentWrapper: {
     justifyContent: "flex-start",
@@ -29,7 +29,7 @@ export default StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
     textAlign: "center",
-    marginVertical: 30,
+    marginVertical: 20,
   },
   text: {
     textDecorationLine: "underline",
@@ -37,7 +37,7 @@ export default StyleSheet.create({
     margin: 24,
   },
   buttonWrapper: {
-    width: Platform.OS === "web" ?  500 : 'auto',
+    width: Platform.OS === "web" ?  300 : 'auto',
     paddingHorizontal: 24,
     paddingVertical: 24,
   },
